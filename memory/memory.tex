@@ -109,6 +109,20 @@ from accidently modifying its instructions.
 
 
 \subsection{Initialized Data Segment}
+\textbf{Initialized data segment}, usually called simply the data segment. 
+A data segment is a portion of the virtual address space of a program, 
+which contains the global variables and static variables that are initialized by the programmer.
+
+Note that, the data segment is not read only, since the values of the variables can be altered 
+at run time.
+
+This segment can be further classified into the initialized read-only and the initialized
+read-write area.
+For instance, the global string defined by char s[] = "Hello World" in C, and a C statement like 
+int debug = 1 outside the main would be stored in the initialized read-write area.
+And a global C statement like const char* str = "Hello World" makes the string literal "Hello World" 
+to be stored in the initialized read-only area, and the pointer variable in the initialized 
+read-write area.  
 
 \subsection{Uninitialized Data Segment}
 
